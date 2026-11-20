@@ -1,4 +1,4 @@
-/* Leonida Legend — original neon-dusk look: deep indigo night, sunset pink and lagoon teal. No game artwork. */
+/* Leonida Legend — an original neon-dusk look: deep indigo night, sunset pink, lagoon teal. No game artwork anywhere. */
 :root {
   --ink: #17122b;
   --paper: #fff8ef;
@@ -104,3 +104,37 @@ h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
 .differ-card { border-top-color: var(--pink); }
 footer { padding: 14px 22px 22px; font-size: 12px; color: #6b5f45; max-width: 1180px; }
 @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .stages { grid-template-columns: 1fr 1fr; } #registry, #checklist100, #differ { grid-template-columns: 1fr; } .detail-pane { position: static; } }
+
+/* Print: the tracker doubles as a paper checklist. Strip the dark chrome and the
+   interactive controls, lay the list out in a single column, and let the detail
+   pane print in full instead of inside its on-screen scroll box. */
+@media print {
+  body { background: #fff; color: #000; font-size: 12px; }
+  #topbar { background: none; color: #000; padding: 0 0 8px; }
+  .brand-mark { background: none; border: 1.5px solid #000; color: #000; }
+  .bar { border: 1px solid #000; }
+  #bar-fill { background: #999; }
+  .audit-bar { background: none; color: #000; border-bottom: 2px solid #000; padding: 6px 0; }
+  .quick-nav, .controls, .online-note, #export, .import-btn { display: none !important; }
+  #roadmap { background: none; border-bottom: 2px solid #000; padding: 8px 0; }
+  .stages { grid-template-columns: 1fr 1fr; }
+  .stages li { border: 1px solid #999; break-inside: avoid; }
+  .layout { grid-template-columns: 1fr; padding: 8px 0; }
+  .next-up { border: 1.5px dashed #666; background: none; }
+  .trophy { border: 1px solid #999; break-inside: avoid; }
+  .detail-pane { position: static; max-height: none; overflow: visible; background: none; color: #000; border: 1.5px solid #000; }
+  .detail-pane h2 { color: #000; }
+  .detail-pane h4 { color: #333; }
+  .your-count { border: 1.5px solid #666; background: none; }
+  .your-count button { display: none; }
+  .items-list { max-height: none; overflow: visible; }
+  .item-row { border: 1px solid #999; background: none; }
+  .item-row.done span { text-decoration: none; }
+  #sources, #hundred, #differ-sec { background: none; color: #000; padding: 10px 0; }
+  #sources h2, #hundred h2, #differ-sec h2 { color: #000; }
+  #registry, #checklist100, #differ { grid-template-columns: 1fr; }
+  .src-card { background: none; border: 1px solid #999; break-inside: avoid; }
+  .src-card h3 { color: #000; }
+  .src-url { color: #333; }
+  footer { padding: 10px 0; color: #333; }
+}

@@ -1,8 +1,9 @@
-// Leonida Legend — round 3 tracker logic: everything round 2 had (checklist, per-trophy
-// count trackers, live audit bar, numbered cited steps, sources registry, next-up list,
-// filters, spoiler shield, export/import) plus round 3's per-item checklists whose ticks
-// feed the count trackers, the full 100% completion checklist, and the sources-differ
-// panel. All state lives in localStorage; everything runs offline.
+// Leonida Legend — the tracker logic for the round-3 guide: everything the earlier rounds
+// had (earned checklist, a count tracker per counted trophy, a live audit bar, numbered
+// steps that cite the registry, the sources registry itself, the next-up list, filters, the
+// spoiler shield, export/import) plus round 3's per-item checklists — whose ticks feed the
+// count trackers — the full 100% completion checklist and the sources-differ panel.
+// All state lives in localStorage and everything runs offline.
 const EARNED_KEY = 'leonida-legend-earned-v1';
 const COUNTS_KEY = 'leonida-legend-counts-v1';
 const ITEMS_KEY = 'leonida-legend-items-v1';
@@ -36,9 +37,9 @@ function saveItems() {
   localStorage.setItem(ITEMS_KEY, JSON.stringify(itemsDone));
 }
 
-// Round 3: ticking a checklist item feeds the trophy's YOUR COUNT by the item's units
-// (a meditation spot counts 1–2 meditations, a shooting-range course counts its 3–4
-// golds, everything else counts 1), capped at the trophy's target. Unticking subtracts.
+// Ticking a checklist item feeds the trophy's YOUR COUNT by the item's units — a meditation
+// spot is worth 1–2 meditations, a shooting-range course its 3–4 golds, everything else 1 —
+// capped at the trophy's target. Unticking subtracts the same units back off.
 function toggleItem(trophy, item, checked) {
   const done = new Set(itemsDone[trophy.name] ?? []);
   if (checked) done.add(item.name);
@@ -388,10 +389,21 @@ document.getElementById('import').addEventListener('change', async (event) => {
 });
 gradeEl.addEventListener('change', renderList);
 searchEl.addEventListener('input', renderList);
+// Keyboard shortcut: pressing "/" anywhere outside a text field jumps straight to the
+// search box, so the list can be filtered without reaching for the mouse.
+document.addEventListener('keydown', (event) => {
+  if (event.key !== '/') return;
+  const target = event.target;
+  const typing = target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement;
+  if (typing) return;
+  event.preventDefault();
+  searchEl.focus();
+  searchEl.select();
+});
 spoilerEl.addEventListener('change', () => {
   renderList();
   const current = trophies.find((t) => t.name === selectedName);
-  if (current) showGuide(current); // spoiler shield applies to the open guide panel too
+  if (current) showGuide(current); // the spoiler shield applies to the open guide panel too
 });
 onlyLeftEl.addEventListener('change', renderList);
 renderAudit();
@@ -399,6 +411,6 @@ renderRegistry();
 renderChecklist100();
 renderDiffer();
 renderList();
-showGuide(trophies[27]); // Positive Mental Attitude open by default: the one missable that matters, with its count tracker.
+showGuide(trophies[27]); // Positive Mental Attitude opens by default: the one missable that matters, with its count tracker.
 selectedName = trophies[27].name;
 renderList();

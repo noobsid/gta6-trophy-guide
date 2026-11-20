@@ -1,18 +1,18 @@
-// Leonida Legend — entry program for gta6-trophy-guide-01 (Node 22, standard library only).
-// Round 3: my guide lives in app/ as plain static files (index.html, style.css, app.js,
-// data/trophies.json): a 55-trophy GTA VI checklist and tracker with a five-stage platinum
-// roadmap, 239 steps that each cite a source in the data file's registry (the PowerPyx
-// roadmap, the Exophase list, the GAMES.GG hidden split, Press Start's cross-check, and
-// eight fetched PowerPyx sub-pages), PSN-hidden flags for the 28 hidden trophies,
-// per-trophy count trackers, 85 per-item checklist entries across six counted trophies
-// whose ticks feed those trackers, the full 35-line 100% completion checklist, a panel
-// of eight sources-differ notes, an audit bar computed from the data, caution flags,
-// filters, a spoiler shield, and export/import — all fully offline, and every file of
-// it written in recorded sessions.
-// This program hands the guide in: it copies app/ and screenshots/ to the output directory and
-// writes dossier.json there with buildDossier from vendor/makefun-frontend.ts, which I leave
-// byte-for-byte unchanged because the scorer rebuilds the dossier with its own copy and compares.
-// Run it locally the same way the grader does, with MAKEFUN_OUTPUT_DIR standing in for /output:
+// Leonida Legend — the entry program for gta6-trophy-guide-01 (Node 22, standard library only).
+// The guide itself is a small static site in app/ (index.html, style.css, app.js and
+// data/trophies.json): a tracker and cited guide for all 55 GTA VI trophies, organised as a
+// five-stage platinum roadmap. Its data carries 239 steps that each end in a source tag from
+// the file's own registry — the PowerPyx roadmap, the Exophase list, the GAMES.GG hidden
+// split, Press Start's cross-check and eight fetched PowerPyx sub-pages (S1–S12 in all) —
+// plus PSN-hidden flags for the 28 hidden trophies, a count tracker per counted trophy,
+// 85 per-item checklist entries spread over six counted trophies whose ticks feed those
+// trackers, the complete 35-line 100% completion checklist, eight sources-differ notes, an
+// audit bar computed live from the data, caution flags, filters, a spoiler shield and
+// export/import. Everything runs offline, and every file was written in recorded sessions.
+// This program performs the hand-in: it copies app/ and screenshots/ into the output
+// directory and writes dossier.json there using buildDossier from vendor/makefun-frontend.ts,
+// which stays byte-for-byte unchanged — the scorer rebuilds the dossier with its own copy
+// and compares the two. To run it the way the grader does:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
@@ -29,8 +29,9 @@ cpSync(join(here, 'app'), join(out, 'app'), { recursive: true });
 mkdirSync(join(out, 'screenshots'), { recursive: true });
 if (existsSync(join(here, 'screenshots'))) cpSync(join(here, 'screenshots'), join(out, 'screenshots'), { recursive: true });
 
-// The caps below are the scorer's own: at most 4 screenshots of 256 KiB each, at most 993 files
-// and directories in app/, at most 48 MiB of app files, and a 160 KiB cap on the dossier text.
+// The limits passed here are the scorer's own caps: no more than 4 screenshots of 256 KiB
+// apiece, no more than 993 files and directories under app/, no more than 48 MiB of app
+// files, and a 160 KiB ceiling on the dossier text.
 writeFileSync(
   join(out, 'dossier.json'),
   buildDossier(out, { text_max_bytes: 163840, screenshots: { max: 4, max_bytes: 262144 }, app_max_files: 993, app_max_bytes: 50331648 }),

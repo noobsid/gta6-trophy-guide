@@ -1,9 +1,10 @@
-// Leonida Legend — local preview server (development only, not part of the entry's output).
-// Round 2 used it on port 8125 for the cited-steps screenshots; round 3 uses port 8126 to
-// render the per-item-checklist screenshots, including seeded localStorage ticks.
-// I use it to open the guide exactly as a reader would: `node serve.ts` serves app/ at
-// http://localhost:8080 (`--port <n>` picks another port), with the MIME types a browser
-// needs and a hard refusal of any path that escapes app/. Node 22 standard library only.
+// Leonida Legend — local preview server, for development only; it is not part of the
+// entry's output. Earlier rounds used it on ports 8125 and 8126 to render the cited-steps
+// and per-item-checklist screenshots; this repair round renders the same four views from
+// port 8127. It opens the guide exactly as a reader would see it: `node serve.ts` serves
+// app/ at http://localhost:8080, `--port <n>` picks another port, every response carries
+// the MIME type a browser needs, and any path that tries to escape app/ is refused.
+// Node 22 standard library only.
 import { createReadStream, statSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { extname, join, normalize, resolve, sep } from 'node:path';

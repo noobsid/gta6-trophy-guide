@@ -20,6 +20,12 @@ h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
 .bar { height: 12px; background: rgba(255,255,255,.28); border-radius: 8px; overflow: hidden; }
 #bar-fill { height: 100%; width: 0%; background: var(--sun); transition: width .25s; }
 .grade-line { margin: 6px 0 0; font-size: 12px; opacity: .95; }
+.audit-bar { background: #17122b; color: #ffe9a8; font-weight: bold; font-size: 12.8px; padding: 9px 22px; letter-spacing: .2px; border-bottom: 3px solid var(--teal); }
+.quick-nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 9px 22px; background: #fff; border-bottom: 1px solid var(--line); }
+.quick-nav a { color: var(--teal); font-weight: bold; text-decoration: none; border: 1.5px solid var(--teal); border-radius: 999px; padding: 4px 13px; font-size: 12.5px; }
+.quick-nav a:hover { background: var(--teal); color: #fff; }
+.quick-nav a#nav-missables { color: #b00050; border-color: var(--pink); }
+.nav-note { font-size: 12px; color: #6b5f45; margin-left: 6px; }
 #roadmap { padding: 14px 22px 6px; background: linear-gradient(180deg, #ffe9d2, var(--paper)); border-bottom: 3px solid var(--sun); }
 #roadmap h2 { margin: 0 0 6px; font-size: 19px; color: #7b1e5e; }
 .roadmap-intro { margin: 0 0 8px; max-width: 1180px; }
@@ -42,6 +48,11 @@ h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
 .import-btn input { display: none; }
 .online-note, .showing { margin: 8px 22px 0; font-size: 12.5px; color: #5a4a2f; }
 .layout { display: grid; grid-template-columns: 1.55fr 1fr; gap: 16px; padding: 14px 22px; align-items: start; }
+.next-up { background: #fff3d6; border: 1.5px dashed var(--sun); border-radius: 10px; padding: 9px 13px; margin-bottom: 11px; }
+.next-up h3 { margin: 0 0 4px; font-size: 13.5px; color: #7b1e5e; text-transform: uppercase; letter-spacing: .6px; }
+.next-up ol { margin: 0; padding-left: 20px; }
+.next-up li { cursor: pointer; font-size: 13px; padding: 1.5px 0; }
+.next-up li:hover { color: var(--pink); }
 .trophy { display: grid; grid-template-columns: 30px 1fr auto; gap: 10px; background: var(--card); border: 1px solid var(--line); border-left: 6px solid #bbb; border-radius: 10px; padding: 10px 12px; margin-bottom: 9px; cursor: pointer; }
 .trophy:hover { border-color: var(--teal); }
 .trophy.selected { outline: 2.5px solid var(--pink); }
@@ -61,5 +72,20 @@ h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
 .detail-pane h4 { margin: 13px 0 4px; color: #7fe3e0; font-size: 12.5px; text-transform: uppercase; letter-spacing: 1px; }
 .detail-pane p { margin: 0 0 6px; font-size: 13.5px; }
 .detail-hint { opacity: .85; }
+.your-count { display: flex; gap: 9px; align-items: center; flex-wrap: wrap; background: rgba(255,179,71,.16); border: 1.5px solid var(--sun); border-radius: 9px; padding: 9px 11px; margin: 10px 0 2px; font-weight: bold; }
+.your-count button { width: 30px; height: 30px; border-radius: 50%; border: 0; background: var(--sun); color: #241047; font-size: 18px; font-weight: bold; cursor: pointer; line-height: 1; }
+.your-count button:hover { background: var(--pink); color: #fff; }
+.count-note { font-weight: normal; font-size: 11.5px; opacity: .8; }
+.steps { margin: 4px 0 6px; padding-left: 21px; }
+.steps li { font-size: 13.3px; margin-bottom: 5px; }
+.reg-line { font-size: 12px; opacity: .85; }
+#sources { padding: 16px 22px 8px; background: #17122b; color: #fdf6ec; }
+#sources h2 { margin: 0 0 6px; font-size: 19px; color: var(--sun); }
+#sources > p { max-width: 1180px; opacity: .92; }
+#registry { display: grid; grid-template-columns: repeat(2, 1fr); gap: 11px; }
+.src-card { background: #241047; border: 1px solid #4a3577; border-top: 4px solid var(--teal); border-radius: 9px; padding: 11px 13px; }
+.src-card h3 { margin: 0 0 4px; font-size: 14.5px; color: #7fe3e0; }
+.src-card p { margin: 0 0 4px; font-size: 12.8px; }
+.src-url { color: var(--sun); word-break: break-all; font-size: 12px !important; }
 footer { padding: 14px 22px 22px; font-size: 12px; color: #6b5f45; max-width: 1180px; }
-@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .stages { grid-template-columns: 1fr 1fr; } .detail-pane { position: static; } }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .stages { grid-template-columns: 1fr 1fr; } #registry { grid-template-columns: 1fr; } .detail-pane { position: static; } }

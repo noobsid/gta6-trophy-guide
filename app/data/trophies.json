@@ -8,7 +8,68 @@
   {"key": "S1", "name": "PowerPyx — GTA 6 Trophy Guide & Roadmap", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vI-trophy-guide-roadmap/", "what": "Fetched in full for round 2: the platinum roadmap (difficulty 4/10, ~200 hours, 1 playthrough, no mission replay), the one potentially missable trophy, and a method for nearly every trophy — mission unlock points, strand quest lists, locations and counts."},
   {"key": "S2", "name": "Exophase — Grand Theft Auto VI Trophies (PS5)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/", "what": "Fetched in full: the PS5 trophy list itself — official names and descriptions in order, with live rarity percentages. The authority for the 55 names and descriptions shown in this tracker."},
   {"key": "S3", "name": "GAMES.GG — GTA 6 Trophy List: How to Unlock All Achievements & Trophies", "url": "https://games.gg/grand-theft-auto-vi/guides/complete-grand-theft-auto-6-trophy-list/", "what": "Fetched in full: the 27 non-hidden / 28 hidden split used for every hidden flag here, a save-precaution roadmap, the trophy-vs-100% threshold table, and methods for the vault, airport, bowling, garage and registration trophies."},
-  {"key": "S4", "name": "Press Start — Here's The Full Trophy/Achievement List For Grand Theft Auto 6", "url": "https://press-start.com.au/news/2026/11/18/gta-6-trophy-list/", "what": "Fetched in full: an independent printing of all 55 names, grades and descriptions, used to cross-check S2 entry by entry before any name was trusted."}
+  {"key": "S4", "name": "Press Start — Here's The Full Trophy/Achievement List For Grand Theft Auto 6", "url": "https://press-start.com.au/news/2026/11/18/gta-6-trophy-list/", "what": "Fetched in full: an independent printing of all 55 names, grades and descriptions, used to cross-check S2 entry by entry before any name was trusted."},
+  {"key": "S5", "name": "PowerPyx — GTA 6 All Meditation Spot Locations", "url": "https://www.powerpyx.com/gta-6-all-meditation-spot-locations/", "what": "Fetched in full for round 3: all 10 meditation spots named with their counties and landmarks — the per-item checklist for Positive Mental Attitude — plus the rule that spots 2–9 count twice (once per character) and that the final spot, Ascent Mountain, is only marked after all the others."},
+  {"key": "S6", "name": "PowerPyx — GTA 6 All Shooting Range Gold Medal Challenges", "url": "https://www.powerpyx.com/gta-6-all-shooting-range-gold-medal-challenges/", "what": "Fetched in full for round 3: the 42 gold medals live in 12 challenges at just 2 ranges — Griffin in north-west Vice City (6 courses × 3 golds) and Rodgers Ranch in north-east Port Gellhorn (6 courses × 4 golds) — with every course and difficulty named for the Shootist item checklist, and the $5 Waiver Pass needed at each range."},
+  {"key": "S7", "name": "PowerPyx — GTA 6 All Stunt Jump Locations", "url": "https://www.powerpyx.com/gta-6-all-stunt-jump-locations/", "what": "Fetched in full for round 3: the stunt-jump catalogue is a work in progress — 24 of 130 jumps published when fetched, grouped by county (Mariana 7, Vice-Dale 7, Leonard 3, Kelly 6, Lummox 1). Those 24 named jumps form the Cunning Stunts starter checklist here and are labelled partial, never presented as the full 130."},
+  {"key": "S8", "name": "PowerPyx — GTA 6 All Collectible Card Set Locations", "url": "https://www.powerpyx.com/gta-6-all-collectible-card-sets-locations/", "what": "Fetched in full for round 3: all 18 card sets named with their card counts (480 unique cards in total), where cards are found (indoors on surfaces and walls, outdoors in yellow phone boxes and tool boxes), and the split between the trophy's 3 complete sets and the 100% checklist's 15."},
+  {"key": "S9", "name": "PowerPyx — GTA 6 All Top Fun Drone Race Time Trial Locations", "url": "https://www.powerpyx.com/gta-6-all-top-fun-drone-race-time-trial-locations/", "what": "Fetched in full for round 3: all 14 drone-race locations with their 42 races and par times — the Top Fun item checklist — listed south to north, with the rule that only the first two races per location need their par beaten and Dalton Island is reachable only by boat or aircraft."},
+  {"key": "S10", "name": "PowerPyx — GTA 6 100% Completion Checklist & Guide", "url": "https://www.powerpyx.com/gta-6-100-completion-checklist-guide/", "what": "Fetched in full for round 3: the complete 100% checklist — Story & Tasks, Exploration & Activities, Discovery — reproduced line by line in this guide's 100% section, and the second, higher finish line behind most of the sources-differ entries (300 stunts, 15 card sets, 30 race wins, 200 of 277 base-model vehicles)."},
+  {"key": "S11", "name": "PowerPyx — GTA 6 All WAiNK Scan Locations", "url": "https://www.powerpyx.com/gta-6-all-waink-scan-locations/", "what": "Fetched in full for round 3: the five WAiNK scan sets (31 landmarks, 35 curiosities, 23 sculptures, a fourth set still listed as unknown, and the No Flusher Tags), how the nearby-scan cue works, and the warning that AHOL Street Art and 1010 Murals scan the same way but do not count toward the 100."},
+  {"key": "S12", "name": "PowerPyx — GTA 6 All Landmark Scan Locations", "url": "https://www.powerpyx.com/gta-6-all-landmark-scan-locations/", "what": "Fetched in full for round 3: the landmark list is a work in progress — 7 of the 31 landmarks named with county and district so far (Lawton Co. Paper Mill, Farmer Scrumpy's Apple Orchard, Gellhorn Fun Fair, Belpoint Lighthouse, Kalaga Lookout, Dock Ring, Grayson Assembly). Those 7 form the published part of the You WAiNKer! item checklist."}
+ ],
+ "completion_checklist": [
+  {"group": "Story & Tasks", "items": [
+   "Finish the story [S10]",
+   "Complete 100 optional tasks — 200–300 exist, and Moses and Randy car deliveries, Tyrone's labs and the meditations all count [S10]",
+   "Clear 39 of 39 gang operations, looting every key valuable [S10]",
+   "Fully complete 22 of 22 bank jobs — cash drawer, safe, and the vault at large banks [S10]",
+   "Fully complete 7 of 7 payday loan jobs [S10]",
+   "Fully complete 34 of 35 Smash 'N' Grabs — pawn shops and jewelry stores, back-room safes included [S10]",
+   "Fully complete 50 of 91 stick ups [S10]",
+   "Fence $100,000 of narcotics [S10]",
+   "Fence $100,000 of jewelry [S10]",
+   "Fence $250,000 of marked bills — one large-bank vault can pay up to $205,000 [S10]",
+   "Hit 8 of 8 large-bank vaults [S10]",
+   "Fence $200,000 of vehicles — Randy's Wish List cars pay around $35,000 in perfect condition [S10]"
+  ]},
+  {"group": "Exploration & Activities", "items": [
+   "Complete 5 of 7 Kenton treasure sets [S10]",
+   "Find 15 of 18 collectible card sets [S10]",
+   "Scan 100 WAiNK locations [S10]",
+   "Find 33 of 33 underwater discoveries — Kenton's shipwrecks [S10]",
+   "Find 30 of 34 magazines, books & comics — 27 magazines plus 7 book swaps [S10]",
+   "Complete 15 of 18 meditations [S10]",
+   "Destroy 100 of 125 cocaine flamingos [S10]",
+   "Complete 2 of 2 unique playlists [S10]",
+   "Discover 70 of 79 styles [S10]",
+   "Win 30 of 40 unique races [S10]",
+   "Earn 10 of 13 race challenge gold medals [S10]",
+   "Earn 42 of 42 shooting range gold medals [S10]",
+   "Play 4 of 4 video games [S10]",
+   "Defeat 5 of 7 pool opponents [S10]",
+   "Play 2 of 3 mini golf locations [S10]",
+   "Score 90 of 100 basketball hoops [S10]",
+   "Complete 42 of 42 drone time trials [S10]",
+   "Complete 300 of 397 stunts — 130 stunt jumps, 202 under the bridges, 40 knife flights, 25 base jumps [S10]",
+   "Complete 70 of 80 challenges [S10]",
+   "Complete 15 of 15 Bret's Target Decks [S10]"
+  ]},
+  {"group": "Discovery", "items": [
+   "Scan 200 of 277 base model vehicles with the WAiNK app [S10]",
+   "Find 50 of 66 standard issue weapons — 53 guns, 9 melee, 4 explosives [S10]",
+   "Study 100 of 255 animals through the binoculars [S10]"
+  ]}
+ ],
+ "sources_differ": [
+  {"topic": "Stunts — 250 or 300?", "detail": "The trophy pops at 250 of 397 stunts, but the 100% checklist holds its own line at 300 of 397. Two finish lines from the same source family: stop at 250 only if you are skipping 100% [S1][S10]."},
+  {"topic": "Shooting ranges — 12 locations or 2?", "detail": "The main guide's own link promises '12 Shooting Range Locations', but the fetched range guide puts the 42 golds in 12 challenges at only 2 ranges — Griffin in north-west Vice City and Rodgers Ranch in north-east Port Gellhorn. Trust the sub-page: there are two buildings to visit, not twelve [S1][S6]."},
+  {"topic": "Meditations — 18 meditations, 10 spots, 15 needed", "detail": "The trophy counts 18 meditations but there are only 10 spots: spots 2–9 count twice, once with each character, and the 100% checklist asks for only 15 of 18. Whether the Chapter 1 balcony meditation is strictly required for the trophy is still unconfirmed — PowerPyx says so on both its roadmap and its meditation page, so this guide keeps it flagged ⚠ rather than guessing [S1][S5][S10]."},
+  {"topic": "Card sets — 3 or 15?", "detail": "Don't Touch My Deck pops at 3 complete sets; the 100% checklist wants 15 of the 18 sets, which means at least 372 of the 480 unique cards. A finished card hunt for the trophy is barely a fifth of the 100% hunt [S8][S10]."},
+  {"topic": "Vehicles — 557 in the game, 277 that count", "detail": "PowerPyx's trophy guide says GTA VI features 557 vehicles at launch, but the 100% checklist counts only the 277 base models, 200 of which must be scanned. Whip It Good's 100 discoveries can include variants the checklist ignores [S1][S10]."},
+  {"topic": "WAiNK — 89 named scans, 100 required", "detail": "The published WAiNK sets name 31 landmarks + 35 curiosities + 23 sculptures = 89 scans, plus a fourth set PowerPyx still lists as unknown and the No Flusher Tags. The trophy needs any 100, so the balance comes from sets still being catalogued — and only 7 of the 31 landmarks had been published when the list was fetched [S1][S11][S12]."},
+  {"topic": "Drone races — win 14 or finish 42?", "detail": "Top Fun pops with one win at each of the 14 locations. The 100% checklist wants all 42 time trials completed — but only the first two races at each location (28 of 42) need their par time beaten; the third just needs finishing [S9][S10]."},
+  {"topic": "Races — 20 wins or 30?", "detail": "Earn Cash, Not Kudos pops at 20 different race wins; the 100% checklist raises the bar to 30 of the 40 unique races. Winning every race once overshoots both bars [S1][S10]."}
  ],
  "trophies": [
   {
@@ -294,7 +355,35 @@
     "Under-the-bridge flights are the fastest category to farm [S1]",
     "Track progress by region under Progress > Activities > Stunts, or by name on the map under Exploration > Stunt Spots [S1]",
     "Stop at 250 for the trophy; only the 100% checklist asks for 300 [S1][S3]",
-    "Land clean and wait for the completion confirmation before moving on [S1]"
+    "Land clean and wait for the completion confirmation before moving on [S1]",
+    "Work the 24 already-published stunt jumps in the checklist below county by county — the source catalogue is still a work in progress at 24 of 130 jumps [S7]"
+   ],
+   "items_note": "PowerPyx's stunt-jump catalogue is a work in progress — 24 of 130 jumps published when fetched (Mariana 7 of 17, Vice-Dale 7 of 55, Leonard 3 of 13, Kelly 6 of 29, Lummox 1 of 16). Each jump ticked counts as 1 stunt toward the 250 [S7].",
+   "items": [
+    {"name": "Mile Zero Air Station Southeast", "where": "Mariana County", "src": "S7", "units": 1},
+    {"name": "Saltrock Bridge West", "where": "Mariana County", "src": "S7", "units": 1},
+    {"name": "Saltrock Bridge East", "where": "Mariana County", "src": "S7", "units": 1},
+    {"name": "Key Lento Bridge West", "where": "Mariana County", "src": "S7", "units": 1},
+    {"name": "Key Lento Bridge East", "where": "Mariana County", "src": "S7", "units": 1},
+    {"name": "Longneck Trail", "where": "Mariana County", "src": "S7", "units": 1},
+    {"name": "Nehrling River", "where": "Mariana County", "src": "S7", "units": 1},
+    {"name": "Hamlet Backyard", "where": "Vice-Dale County", "src": "S7", "units": 1},
+    {"name": "VCIA Storage Facility", "where": "Vice-Dale County", "src": "S7", "units": 1},
+    {"name": "SW 4th Avenue Construction", "where": "Vice-Dale County", "src": "S7", "units": 1},
+    {"name": "Blackwell Sandrock", "where": "Vice-Dale County", "src": "S7", "units": 1},
+    {"name": "Apollo Aggregates South", "where": "Vice-Dale County", "src": "S7", "units": 1},
+    {"name": "West Vice-Dale County Broken Bridge", "where": "Vice-Dale County", "src": "S7", "units": 1},
+    {"name": "Nolan Center Parking", "where": "Vice-Dale County", "src": "S7", "units": 1},
+    {"name": "Lake Bonner Construction East", "where": "Leonard County", "src": "S7", "units": 1},
+    {"name": "Lake Leonida Lock South", "where": "Leonard County", "src": "S7", "units": 1},
+    {"name": "Richard Barebone Overpass South", "where": "Leonard County", "src": "S7", "units": 1},
+    {"name": "Gellhorn International Raceway", "where": "Kelly County", "src": "S7", "units": 1},
+    {"name": "Prairie Court", "where": "Kelly County", "src": "S7", "units": 1},
+    {"name": "Starlet Motel Construction", "where": "Kelly County", "src": "S7", "units": 1},
+    {"name": "Howe Dairy", "where": "Kelly County", "src": "S7", "units": 1},
+    {"name": "Saputka River", "where": "Kelly County", "src": "S7", "units": 1},
+    {"name": "South Ambrosia Broken Bridge", "where": "Kelly County", "src": "S7", "units": 1},
+    {"name": "North Moreau Broken Bridge", "where": "Lummox County", "src": "S7", "units": 1}
    ]
   },
   {
@@ -331,10 +420,26 @@
    "guide": "Earn a gold medal in all 42 Shooting Range challenges — a silver that rewards patience, not speed. Learn one weapon family's challenges at a time and replay immediately while the targets are fresh in memory; a gold you nearly missed is a gold you understand. Save the hardest ranges for after the story, when nothing else is competing for your practice time.",
    "sources": "Official name and description: Exophase [S2]. Method: PowerPyx's linked guide covers all 12 shooting range locations and their 42 gold medals; all ranges are also required in full by the 100% checklist [S1].",
    "steps": [
-    "Visit the 12 shooting ranges and open each one's challenge set [S1]",
+    "Open the challenge sets at the ranges — round 3's fetched range guide counts 12 challenges at 2 ranges, not 12 ranges (see Sources differ) [S6]",
     "Gold all 42 challenges — learn one weapon family at a time and replay immediately [S1]",
     "Shooting-range play also raises your Focus level, which feeds Gunslinger [S1]",
-    "All ranges are required for the 100% checklist too, so no gold here is wasted work [S1]"
+    "All ranges are required for the 100% checklist too, so no gold here is wasted work [S1]",
+    "Buy the $5 Waiver Pass from the clerk at each range to mark its challenges on the map, and play the Griffin courses as Lucia — she runs faster through them [S6]"
+   ],
+   "items_note": "The 42 golds sit in 12 courses: Griffin (north-west Vice City) holds 3 golds per course, Rodgers Ranch (north-east Port Gellhorn) holds 4. Ticking a course adds its golds to YOUR COUNT above [S6].",
+   "items": [
+    {"name": "3-Point Range", "where": "Griffin Shooting Range, north-west Vice City — 3 golds: Beginner, Intermediate, Advanced", "src": "S6", "units": 3},
+    {"name": "Hook Range", "where": "Griffin Shooting Range, north-west Vice City — 3 golds: Beginner, Intermediate, Advanced", "src": "S6", "units": 3},
+    {"name": "Loop Range", "where": "Griffin Shooting Range, north-west Vice City — 3 golds: Beginner, Intermediate, Advanced", "src": "S6", "units": 3},
+    {"name": "Maze Range", "where": "Griffin Shooting Range, north-west Vice City — 3 golds: Beginner, Intermediate, Master", "src": "S6", "units": 3},
+    {"name": "Compound Range", "where": "Griffin Shooting Range, north-west Vice City — 3 golds: Beginner, Intermediate, Master", "src": "S6", "units": 3},
+    {"name": "Villa Range", "where": "Griffin Shooting Range, north-west Vice City — 3 golds: Beginner, Intermediate, Master", "src": "S6", "units": 3},
+    {"name": "Market Range", "where": "Rodgers Ranch, north-east Port Gellhorn — 4 golds, all Pistol: Beginner, Intermediate, Advanced, Master", "src": "S6", "units": 4},
+    {"name": "Zombie Range", "where": "Rodgers Ranch, north-east Port Gellhorn — 4 golds: SMG, Shotgun, Assault Rifle, Shotgun", "src": "S6", "units": 4},
+    {"name": "Hunting Range", "where": "Rodgers Ranch, north-east Port Gellhorn — 4 golds: Pistol, Shotgun, Tactical Rifle, Pistol", "src": "S6", "units": 4},
+    {"name": "Saloon Range", "where": "Rodgers Ranch, north-east Port Gellhorn — 4 golds: Revolver and Tactical Rifle difficulties", "src": "S6", "units": 4},
+    {"name": "Cops & Robbers Range", "where": "Rodgers Ranch, north-east Port Gellhorn — 4 golds, all Sniper Rifle", "src": "S6", "units": 4},
+    {"name": "Alien Range", "where": "Rodgers Ranch, north-east Port Gellhorn — 4 golds: Pistol, Revolver, SMG and Assault Rifle difficulties", "src": "S6", "units": 4}
    ]
   },
   {
@@ -354,7 +459,25 @@
     "Find the 14 Top Fun drone race locations across Leonida [S1]",
     "Fly a course once slowly to learn its gates, then race it to win [S2]",
     "Win at least one race at every location — 42 races exist, one win per location is the trophy [S1]",
-    "Tick locations off as you win them; all of them also count toward 100% [S1]"
+    "Tick locations off as you win them; all of them also count toward 100% [S1]",
+    "Race the locations south to north using the checklist below — each holds 3 time trials, and Dalton Island is reachable only by boat or aircraft [S9]"
+   ],
+   "items_note": "Win one race at a location for the trophy. The par times are the 100% checklist's business — it wants all 42 races finished, with par beaten on the first two at each location (28 of 42) [S9][S10].",
+   "items": [
+    {"name": "Hamlet", "where": "3 races — Deep Roots (par 1:31), Power Station South (1:26), Power Station North (2:04)", "src": "S9", "units": 1},
+    {"name": "Watson Bay", "where": "3 races — Leonida RC Raceway (par 1:27), Watson Bay (1:34), Marshland Animal Park (1:17)", "src": "S9", "units": 1},
+    {"name": "Capri", "where": "3 races — Capri Train Station (par 1:50), Ravella Drive (1:51), Capri Lake (2:01)", "src": "S9", "units": 1},
+    {"name": "Buckskin Swamp", "where": "3 races — Kowaachobee Village (par 1:24), Swampy Sal's Safari Park (1:40), Camp Moonflower (1:48)", "src": "S9", "units": 1},
+    {"name": "Balsero", "where": "3 races — Navitrak (par 1:29), Apollo Aggregates (1:27), Tisha-Wocka Flea Market (1:08)", "src": "S9", "units": 1},
+    {"name": "Downtown", "where": "3 races — Future Leonida Art Museum (par 1:47), Shoreline Market (2:01), Wildland Zoo (1:30)", "src": "S9", "units": 1},
+    {"name": "Dalton Island", "where": "3 races — Avarice Petroleum (par 1:53), The Jamaica (1:16), Ivory Towers (1:42); boat or aircraft only", "src": "S9", "units": 1},
+    {"name": "Vice Beach", "where": "3 races — Leaf Links (par 1:30), Vice Regal Hotel (1:41), St. Vitus Medical Center (2:00)", "src": "S9", "units": 1},
+    {"name": "Waning Sands", "where": "3 races — Hot Skidz (par 1:39), Thundergolf (1:57), Evergreen Mall (1:52)", "src": "S9", "units": 1},
+    {"name": "Ambrosia", "where": "3 races — Captain O'Malley Marina (par 2:03), Allied Crystal (2:02), Waste Transfer Services (1:55)", "src": "S9", "units": 1},
+    {"name": "Port Gellhorn", "where": "3 races — Manifest Canyon (par 1:28), Red Apple Orchard (1:12), Port Gellhorn (1:39)", "src": "S9", "units": 1},
+    {"name": "Draper Island", "where": "3 races — Draper Island Terminal (par 1:49), Draper Refinery East (1:44), Draper Refinery West (1:51)", "src": "S9", "units": 1},
+    {"name": "Moreau Sawmill", "where": "3 races — Abandoned Mining Pit (par 1:03), Adler Creek (1:21), Macalister Gold Mine (0:59)", "src": "S9", "units": 1},
+    {"name": "Millport", "where": "3 races — Millport (par 1:31), Rushwood Logging (2:08), Tallaloko Lakeside Resort (2:05)", "src": "S9", "units": 1}
    ]
   },
   {
@@ -553,7 +676,21 @@
     "Meditate at the 18 spots across 10 locations; a spot used by both Jason and Lucia counts as +2 [S1]",
     "Track progress under Progress > Collections > Exploration > Meditations [S1]",
     "The final spot needs both characters playable together, unlocked after Chapter 2's Coffee Break [S1]",
-    "For the 100% checklist only 15 of 18 are needed — the trophy wants all 18 [S1]"
+    "For the 100% checklist only 15 of 18 are needed — the trophy wants all 18 [S1]",
+    "Use the spot-by-spot checklist below — it names all 10 spots with their counties, from the Chapter 1 balcony to Ascent Mountain, the final spot that is only marked after the rest are done [S5]"
+   ],
+   "items_note": "10 spots, 18 meditations: spots 2–9 count twice (once with each character), the balcony and the finale count once. Ticking a spot adds its meditations to YOUR COUNT above [S5].",
+   "items": [
+    {"name": "Jason's House Meditation", "where": "Jason's house balcony — Chapter 1 only, the morning after Down to Earth [MISSABLE]", "src": "S5", "units": 1},
+    {"name": "Smooth Sand Meditation", "where": "Mariana County — a small sandbar off the west coast of Capri (Meditations 2–3)", "src": "S5", "units": 2},
+    {"name": "Swamp Meditation", "where": "Kelly County, Buckskin Swamp — a wooden dock by a lookout tower (Meditations 4–5)", "src": "S5", "units": 2},
+    {"name": "Worn Stone Meditation", "where": "Kelly County — the bank of the Emerald River at Camp Moonflower (Meditations 6–7)", "src": "S5", "units": 2},
+    {"name": "Red Rocks Meditation", "where": "Kelly County — near where the train tracks cross the highway in Manifest Canyon (Meditations 8–9)", "src": "S5", "units": 2},
+    {"name": "Water Wheel Meditation", "where": "Lummox County — a waterwheel at a ruined paper mill along a river in south Moreau (Meditations 10–11)", "src": "S5", "units": 2},
+    {"name": "Jutting Cliff Meditation", "where": "Lummox County — a tower overlooking a mine in Mount Kalaga National Park (Meditations 12–13)", "src": "S5", "units": 2},
+    {"name": "Waterfall Meditation", "where": "Lummox County — northwest of Tallaloko, overlooking a waterfall (Meditations 14–15)", "src": "S5", "units": 2},
+    {"name": "Seaside Meditation", "where": "Leonard County — a rocky outcrop on the beach east of Waning Sands (Meditations 16–17)", "src": "S5", "units": 2},
+    {"name": "Ascent Mountain", "where": "Lummox County — the peak of Mount Kalaga, in the stone circle; marked only after all other spots (Meditation 18)", "src": "S5", "units": 1}
    ]
   }
 ,
@@ -594,7 +731,29 @@
     "Pick up cards whenever a trip passes one; loose cards only pay off inside a finished set [S2]",
     "Choose the three sets nearest completion out of the 18 that exist [S1]",
     "Close those sets district by district before starting a fourth [S1]",
-    "The third completed set pops the trophy [S2]"
+    "The third completed set pops the trophy [S2]",
+    "Pick your three sets from the full list below — all 18 sets with their card counts; the smallest, Backyard Wrestling, holds just 12 cards [S8]"
+   ],
+   "items_note": "All 18 sets with their card counts — 480 unique cards in total. The trophy needs any 3 complete sets; the 100% checklist wants 15 of 18, at least 372 cards [S8][S10].",
+   "items": [
+    {"name": "Vice City Flamingos", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Vice City Narcos", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Vice City Manatees", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Vice City Club De Fútbol", "where": "30-card set", "src": "S8", "units": 1},
+    {"name": "Liberty City Swingers", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Liberty City Penetrators", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Liberty City Wrath", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Los Santos Corkers", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Los Santos Panic", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Los Santos Pounders", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Backyard Wrestling", "where": "12-card set — the smallest set in the game", "src": "S8", "units": 1},
+    {"name": "America's Next Top Hooker", "where": "24-card set", "src": "S8", "units": 1},
+    {"name": "Delights Dancers", "where": "18-card set", "src": "S8", "units": 1},
+    {"name": "Jack of Hearts Dancers", "where": "36-card set", "src": "S8", "units": 1},
+    {"name": "Nine1Nine Dancers", "where": "36-card set", "src": "S8", "units": 1},
+    {"name": "The Legends of Ratface", "where": "36-card set", "src": "S8", "units": 1},
+    {"name": "Right Wing: America's Hero", "where": "36-card set", "src": "S8", "units": 1},
+    {"name": "Ed Comics Universe", "where": "36-card set", "src": "S8", "units": 1}
    ]
   },
   {
@@ -614,7 +773,18 @@
     "Scan environmental objects with the WAiNK app (hold up, then R1) whenever you pass one [S1]",
     "Hunt by category: 31 landmarks, 35 curiosities, 23 sculptures, plus No Flusher Tags [S1]",
     "Any 100 will do — there are more than 100 in the world, so never backtrack for one specific spot [S1]",
-    "Keep environmental scans separate from vehicle scans in your notes; they are different counters [S3]"
+    "Keep environmental scans separate from vehicle scans in your notes; they are different counters [S3]",
+    "Start with the 7 landmarks already published in the checklist below — and note that AHOL Street Art and 1010 Murals scan the same way but do not count toward this trophy [S11][S12]"
+   ],
+   "items_note": "Only 7 of the 31 landmarks were named when the source list was fetched — it is a work in progress, so this checklist is the published part, not the whole set. The other published WAiNK sets hold 35 curiosities and 23 sculptures, plus the No Flusher Tags [S11][S12].",
+   "items": [
+    {"name": "Lawton Co. Paper Mill", "where": "Lummox County > Moreau — Landmark #5 of 31", "src": "S12", "units": 1},
+    {"name": "Farmer Scrumpy's Apple Orchard", "where": "Kelly County > Manifest Canyon — Landmark #6 of 31", "src": "S12", "units": 1},
+    {"name": "Gellhorn Fun Fair", "where": "Kelly County > Port Gellhorn — Landmark #11 of 31", "src": "S12", "units": 1},
+    {"name": "Belpoint Lighthouse", "where": "Mariana County > Belpoint — Landmark #17 of 31", "src": "S12", "units": 1},
+    {"name": "Kalaga Lookout", "where": "Lummox County > Mount Kalaga National Park — Landmark #18 of 31", "src": "S12", "units": 1},
+    {"name": "Dock Ring", "where": "Vice City > Downtown — Landmark #21 of 31", "src": "S12", "units": 1},
+    {"name": "Grayson Assembly", "where": "Lummox County > Grayson — Landmark #22 of 31", "src": "S12", "units": 1}
    ]
   },
   {

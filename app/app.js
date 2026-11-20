@@ -1,9 +1,11 @@
-// Leonida Legend — round 2 tracker logic: checklist + per-trophy count trackers in
-// localStorage, an audit bar computed live from the data, numbered cited steps in the
-// guide panel, a sources registry, a next-up roadmap list, filters by kind and grade,
-// the spoiler shield for story trophies, and export/import. Everything runs offline.
+// Leonida Legend — round 3 tracker logic: everything round 2 had (checklist, per-trophy
+// count trackers, live audit bar, numbered cited steps, sources registry, next-up list,
+// filters, spoiler shield, export/import) plus round 3's per-item checklists whose ticks
+// feed the count trackers, the full 100% completion checklist, and the sources-differ
+// panel. All state lives in localStorage; everything runs offline.
 const EARNED_KEY = 'leonida-legend-earned-v1';
 const COUNTS_KEY = 'leonida-legend-counts-v1';
+const ITEMS_KEY = 'leonida-legend-items-v1';
 const rowsEl = document.getElementById('rows');
 const detailEl = document.getElementById('detail');
 const gradeEl = document.getElementById('grade');
@@ -12,12 +14,15 @@ const spoilerEl = document.getElementById('spoiler');
 const onlyLeftEl = document.getElementById('only-left');
 let earned = new Set(JSON.parse(localStorage.getItem(EARNED_KEY) ?? '[]'));
 let counts = JSON.parse(localStorage.getItem(COUNTS_KEY) ?? '{}');
+let itemsDone = JSON.parse(localStorage.getItem(ITEMS_KEY) ?? '{}');
 let activeKind = 'all';
 let selectedName = null;
 const data = await (await fetch('data/trophies.json')).json();
 const trophies = data.trophies;
 const registry = data.source_registry ?? [];
 const registryByKey = Object.fromEntries(registry.map((s) => [s.key, s]));
+const completionChecklist = data.completion_checklist ?? [];
+const sourcesDiffer = data.sources_differ ?? [];
 
 function saveProgress() {
   localStorage.setItem(EARNED_KEY, JSON.stringify([...earned]));
@@ -25,6 +30,30 @@ function saveProgress() {
 
 function saveCounts() {
   localStorage.setItem(COUNTS_KEY, JSON.stringify(counts));
+}
+
+function saveItems() {
+  localStorage.setItem(ITEMS_KEY, JSON.stringify(itemsDone));
+}
+
+// Round 3: ticking a checklist item feeds the trophy's YOUR COUNT by the item's units
+// (a meditation spot counts 1–2 meditations, a shooting-range course counts its 3–4
+// golds, everything else counts 1), capped at the trophy's target. Unticking subtracts.
+function toggleItem(trophy, item, checked) {
+  const done = new Set(itemsDone[trophy.name] ?? []);
+  if (checked) done.add(item.name);
+  else done.delete(item.name);
+  itemsDone[trophy.name] = [...done];
+  if (trophy.count) {
+    const units = item.units ?? 1;
+    const now = counts[trophy.name] ?? 0;
+    counts[trophy.name] = Math.min(trophy.count, Math.max(0, now + (checked ? units : -units)));
+    saveCounts();
+  }
+  saveItems();
+  renderAudit();
+  showGuide(trophy);
+  renderList();
 }
 
 function isStory(trophy) {
@@ -52,19 +81,22 @@ function matchesFilters(trophy) {
 
 function sourceKeysOf(trophy) {
   const text = `${trophy.sources} ${(trophy.steps ?? []).join(' ')}`;
-  return [...new Set([...text.matchAll(/\[(S\d)\]/g)].map((m) => m[1]))].sort();
+  return [...new Set([...text.matchAll(/\[(S\d+)\]/g)].map((m) => m[1]))].sort((a, b) => Number(a.slice(1)) - Number(b.slice(1)));
 }
 
 function renderAudit() {
   const allSteps = trophies.flatMap((t) => t.steps ?? []);
-  const tagged = allSteps.filter((s) => /\[(S\d)\]/.test(s)).length;
+  const tagged = allSteps.filter((s) => /\[(S\d+)\]/.test(s)).length;
   const pct = allSteps.length ? Math.round((tagged / allSteps.length) * 100) : 0;
   const backed = trophies.filter((t) => sourceKeysOf(t).length >= 2).length;
   const caution = trophies.filter((t) => t.missable).length;
   const hiddenCount = trophies.filter((t) => t.hidden).length;
+  const allItems = trophies.flatMap((t) => t.items ?? []);
+  const itemTrophies = trophies.filter((t) => t.items?.length).length;
+  const checklistLines = completionChecklist.reduce((n, g) => n + g.items.length, 0);
   const logged = Object.values(counts).reduce((sum, n) => sum + n, 0);
   document.getElementById('audit-bar').textContent =
-    `AUDIT · 55/55 official name, description & grade [S2] · 1P 2G 6S 46B · ${hiddenCount} PSN-hidden [S3] · ${allSteps.length} steps, ${tagged} cited (${pct}%) · ${backed}/55 guides backed by 2+ sources · ${registry.length} registry sources read in full · ${caution} ⚠ caution flags · 0 online trophies · ${logged} counted steps logged by you`;
+    `AUDIT · 55/55 official name, description & grade [S2] · 1P 2G 6S 46B · ${hiddenCount} PSN-hidden [S3] · ${allSteps.length} steps, ${tagged} cited (${pct}%) · ${backed}/55 guides backed by 2+ sources · ${registry.length} registry sources read in full, ${registry.length - 4} of them fetched sub-pages · ${allItems.length} per-item checklist entries across ${itemTrophies} trophies · the ${checklistLines}-line 100% checklist [S10] · ${sourcesDiffer.length} sources-differ notes · ${caution} ⚠ caution flags · 0 online trophies · ${logged} counted steps logged by you`;
 }
 
 function renderRegistry() {
@@ -81,6 +113,43 @@ function renderRegistry() {
     url.className = 'src-url';
     url.textContent = src.url;
     card.append(h, what, url);
+    host.append(card);
+  }
+}
+
+function renderChecklist100() {
+  const host = document.getElementById('checklist100');
+  if (!host) return;
+  host.replaceChildren();
+  for (const group of completionChecklist) {
+    const card = document.createElement('article');
+    card.className = 'src-card';
+    const h = document.createElement('h3');
+    h.textContent = group.group;
+    const ul = document.createElement('ul');
+    ul.className = 'checklist-lines';
+    for (const line of group.items) {
+      const li = document.createElement('li');
+      li.textContent = line;
+      ul.append(li);
+    }
+    card.append(h, ul);
+    host.append(card);
+  }
+}
+
+function renderDiffer() {
+  const host = document.getElementById('differ');
+  if (!host) return;
+  host.replaceChildren();
+  for (const entry of sourcesDiffer) {
+    const card = document.createElement('article');
+    card.className = 'src-card differ-card';
+    const h = document.createElement('h3');
+    h.textContent = entry.topic;
+    const p = document.createElement('p');
+    p.textContent = entry.detail;
+    card.append(h, p);
     host.append(card);
   }
 }
@@ -138,7 +207,7 @@ function countRow(trophy) {
   });
   const note = document.createElement('span');
   note.className = 'count-note';
-  note.textContent = 'saved in this browser';
+  note.textContent = trophy.items?.length ? 'saved in this browser · the checklist below feeds this counter' : 'saved in this browser';
   wrap.append(label, minus, plus, note);
   return wrap;
 }
@@ -181,6 +250,35 @@ function showGuide(trophy) {
       ol.append(li);
     }
     detailEl.append(stepsH, ol);
+  }
+  if (trophy.items?.length) {
+    const itemsH = document.createElement('h4');
+    const doneCount = (itemsDone[trophy.name] ?? []).length;
+    itemsH.textContent = `Item checklist — ${doneCount} of ${trophy.items.length} ticked`;
+    detailEl.append(itemsH);
+    if (trophy.items_note) {
+      const note = document.createElement('p');
+      note.className = 'items-note';
+      note.textContent = trophy.items_note;
+      detailEl.append(note);
+    }
+    const list = document.createElement('div');
+    list.className = 'items-list';
+    const doneSet = new Set(itemsDone[trophy.name] ?? []);
+    for (const item of trophy.items) {
+      const row = document.createElement('label');
+      row.className = `item-row${doneSet.has(item.name) ? ' done' : ''}`;
+      const box = document.createElement('input');
+      box.type = 'checkbox';
+      box.checked = doneSet.has(item.name);
+      box.setAttribute('aria-label', `Tick ${item.name} for ${trophy.name}`);
+      box.addEventListener('change', () => toggleItem(trophy, item, box.checked));
+      const text = document.createElement('span');
+      text.textContent = `${item.name} — ${item.where} [${item.src}]`;
+      row.append(box, text);
+      list.append(row);
+    }
+    detailEl.append(list);
   }
   const srcH = document.createElement('h4');
   srcH.textContent = 'Sources';
@@ -239,7 +337,7 @@ function renderList() {
     const meta = document.createElement('p');
     meta.className = 'meta';
     const now = counts[trophy.name] ?? 0;
-    meta.textContent = `${trophy.kind} · Stage ${trophy.stage}${trophy.count ? ` · Count ${now}/${trophy.count}` : ''} · ${trophy.steps?.length ?? 0} cited steps${trophy.hidden ? ' · PSN-HIDDEN' : ''}${trophy.missable ? ' · ⚠ CAUTION — treat as missable' : ''}`;
+    meta.textContent = `${trophy.kind} · Stage ${trophy.stage}${trophy.count ? ` · Count ${now}/${trophy.count}` : ''} · ${trophy.steps?.length ?? 0} cited steps${trophy.items?.length ? ` · Items ${(itemsDone[trophy.name] ?? []).length}/${trophy.items.length}` : ''}${trophy.hidden ? ' · PSN-HIDDEN' : ''}${trophy.missable ? ' · ⚠ CAUTION — treat as missable' : ''}`;
     body.append(h, d, meta);
     const badge = document.createElement('span');
     badge.className = `grade-badge b-${trophy.grade}`;
@@ -269,7 +367,7 @@ document.getElementById('kind-chips').addEventListener('click', (event) => {
 document.getElementById('nav-missables').addEventListener('click', () => setKind('missable'));
 document.getElementById('export').addEventListener('click', () => {
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([JSON.stringify({ earned: [...earned], counts }, null, 2)], { type: 'application/json' }));
+  a.href = URL.createObjectURL(new Blob([JSON.stringify({ earned: [...earned], counts, items: itemsDone }, null, 2)], { type: 'application/json' }));
   a.download = 'leonida-legend-progress.json';
   a.click();
   URL.revokeObjectURL(a.href);
@@ -281,8 +379,11 @@ document.getElementById('import').addEventListener('change', async (event) => {
   const names = Array.isArray(parsed) ? parsed : parsed.earned ?? [];
   earned = new Set(names.filter((n) => trophies.some((t) => t.name === n)));
   if (!Array.isArray(parsed) && parsed.counts) counts = parsed.counts;
+  if (!Array.isArray(parsed) && parsed.items) itemsDone = parsed.items;
   saveProgress();
   saveCounts();
+  saveItems();
+  renderAudit();
   renderList();
 });
 gradeEl.addEventListener('change', renderList);
@@ -295,6 +396,8 @@ spoilerEl.addEventListener('change', () => {
 onlyLeftEl.addEventListener('change', renderList);
 renderAudit();
 renderRegistry();
+renderChecklist100();
+renderDiffer();
 renderList();
 showGuide(trophies[27]); // Positive Mental Attitude open by default: the one missable that matters, with its count tracker.
 selectedName = trophies[27].name;

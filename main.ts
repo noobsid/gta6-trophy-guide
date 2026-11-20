@@ -1,11 +1,14 @@
 // Leonida Legend — entry program for gta6-trophy-guide-01 (Node 22, standard library only).
-// Round 2: my guide lives in app/ as plain static files (index.html, style.css, app.js,
+// Round 3: my guide lives in app/ as plain static files (index.html, style.css, app.js,
 // data/trophies.json): a 55-trophy GTA VI checklist and tracker with a five-stage platinum
-// roadmap, 233 steps that each cite a source in the data file's registry (the PowerPyx
-// roadmap, the Exophase list, the GAMES.GG hidden split, Press Start's cross-check),
-// PSN-hidden flags for the 28 hidden trophies, per-trophy count trackers, an audit bar
-// computed from the data, caution flags, filters, a spoiler shield, and export/import —
-// all fully offline, and every file of it written in recorded sessions.
+// roadmap, 239 steps that each cite a source in the data file's registry (the PowerPyx
+// roadmap, the Exophase list, the GAMES.GG hidden split, Press Start's cross-check, and
+// eight fetched PowerPyx sub-pages), PSN-hidden flags for the 28 hidden trophies,
+// per-trophy count trackers, 85 per-item checklist entries across six counted trophies
+// whose ticks feed those trackers, the full 35-line 100% completion checklist, a panel
+// of eight sources-differ notes, an audit bar computed from the data, caution flags,
+// filters, a spoiler shield, and export/import — all fully offline, and every file of
+// it written in recorded sessions.
 // This program hands the guide in: it copies app/ and screenshots/ to the output directory and
 // writes dossier.json there with buildDossier from vendor/makefun-frontend.ts, which I leave
 // byte-for-byte unchanged because the scorer rebuilds the dossier with its own copy and compares.

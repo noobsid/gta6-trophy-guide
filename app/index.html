@@ -3,23 +3,74 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker (55 PS5 Trophies)</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header id="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">LL</div>
+    <div>
+      <h1>Leonida Legend</h1>
+      <p class="tagline">The GTA VI trophy guide &amp; tracker — all 55 PlayStation 5 trophies, in your own words, with sources. An original guide: no Rockstar logo, no official artwork.</p>
+    </div>
+  </div>
+  <div class="progress-box">
+    <p id="progress" class="progress-big">0 of 55 earned</p>
+    <div class="bar"><div id="bar-fill"></div></div>
+    <p id="grade-progress" class="grade-line">Platinum 0/1 · Gold 0/2 · Silver 0/6 · Bronze 0/46</p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+
+<section id="roadmap" aria-label="Platinum roadmap">
+  <h2>Roadmap to the Platinum — Vice Got a Price!</h2>
+  <p class="roadmap-intro">Five stages, built from the official descriptions. Story first, counts in parallel, partner &amp; one-off moments banked before the finale, then 100%. <strong>Missable method:</strong> a trophy tied in its official description to one named mission, one named person, a unique animal, a choice or a single moment is flagged <span class="flag">⚠ CAUTION</span> — do it when it first appears and keep a save before it.</p>
+  <ol class="stages">
+    <li><strong>Stage 1 · Arrival.</strong> Gone Fishing, Chapter 1, Breakfast Run. Bank the Ocean Beach cocktail (In The Beginning…) while it is in front of you.</li>
+    <li><strong>Stage 2 · Rising.</strong> Chapters 2–4, The Cartel Heist, Child's Play, Headliners, VCIA Takedown, Operation Savage Glory. Finish stranger strands as you meet them: Andy, Kenton, Billy, Randy, Tyrone, and Bret's unique-animal hunt.</li>
+    <li><strong>Stage 3 · Open Leonida.</strong> The counts, swept district by district: 250 stunts · 42 shooting-range golds · 14 drone-race wins · 20 races · 18 meditation spots · 3 card sets · 100 WAiNK locations · 100 vehicles · 52 areas · 50 challenges · 8 garages · $100,000 spent · $250,000 laundered.</li>
+    <li><strong>Stage 4 · Partner, crime &amp; moments — before the finale.</strong> Hot Together and Retail Therapy with your partner, 5 bank vaults, an armoured truck, a stealth jewellery robbery, 9 gang operations, Combat Focus ×5, plus the flagged one-off moments at VCIA, the showroom and the Rhinos.</li>
+    <li><strong>Stage 5 · Finale &amp; 100%.</strong> The final mission (Gold), then close the last counts for A Long Road — 100% Completion (Gold) — and the Platinum unlocks itself.</li>
+  </ol>
+  <p id="missable-summary" class="missable-summary">16 caution-flagged trophies — use the Missable filter below to audit them together.</p>
+</section>
+
+<div class="controls" role="search">
+  <label>Search <input id="search" type="search" placeholder="name, place, person…"></label>
+  <label>Grade
+    <select id="grade">
+      <option value="all">All grades</option><option value="platinum">Platinum</option>
+      <option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <div class="chips" id="kind-chips" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="chip active">All 55</button>
+    <button type="button" data-kind="story" class="chip">Story</button>
+    <button type="button" data-kind="missable" class="chip">⚠ Missable</button>
+    <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+    <button type="button" data-kind="activities" class="chip">Activities</button>
+    <button type="button" data-kind="online" class="chip">Online</button>
+  </div>
+  <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> Spoiler shield: hide story trophies until earned</label>
+  <label class="spoiler-toggle"><input id="only-left" type="checkbox"> Show only unearned</label>
   <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+  <label class="import-btn">Import progress <input id="import" type="file" accept="application/json"></label>
 </div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+<p id="online-note" class="online-note" hidden>The official PS5 list contains no online trophies: all 55 are offline. This filter is here so you can check that yourself — it correctly shows none.</p>
+<p id="showing" class="showing"></p>
+
+<main class="layout">
+  <section class="list-pane" aria-label="Trophy checklist">
+    <div id="rows"></div>
+  </section>
+  <aside id="detail" class="detail-pane" aria-label="Trophy guide">
+    <p class="detail-hint">Select any trophy to read its full guide here — what to do, where and how, when it can be missed, and its sources.</p>
+  </aside>
+</main>
+
+<footer>
+  <p>Sources for the whole guide: official PlayStation 5 trophy names, descriptions and grades; the trophy list and its tracked counts as listed by Exophase and PSNProfiles. Each trophy's own sources are named in its guide panel. Guide text is original to this entry and cites, never copies, its sources. Works fully offline; progress is saved only in your browser (localStorage).</p>
+</footer>
 <script type="module" src="app.js"></script>
 </body>
 </html>

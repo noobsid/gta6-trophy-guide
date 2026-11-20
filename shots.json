@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-cover-roadmap.jpg","view":"Full guide at load: roadmap stages, progress by grade, filters, checklist with official names/descriptions/grades, and The Shootist guide panel open with its sources","viewport":{"height":800,"width":1280}},{"file":"2-missable.jpg","view":"Missable filter active: the 16 caution-flagged trophies with a strand-final guide open","viewport":{"height":800,"width":1280}},{"file":"3-spoiler-story.jpg","view":"Story filter with the spoiler shield on: unearned story trophies hidden, earned ones revealed","viewport":{"height":800,"width":1280}},{"file":"4-collectibles.jpg","view":"Collectibles filter with a card-set guide open, progress showing earned trophies","viewport":{"height":800,"width":1280}}]
